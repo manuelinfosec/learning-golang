@@ -16,6 +16,7 @@ func TestCountWords(t *testing.T) {
 	}
 }
 
+// TestCountLines tests the count function set to count lines
 func TestCountLines(t *testing.T) {
 	b := bytes.NewBufferString("word1\nword2\nword3\nword4")
 	expected_count := 4
@@ -27,6 +28,7 @@ func TestCountLines(t *testing.T) {
 
 }
 
+// TestCountBytes tests the count function set to count bytes
 func TestCountBytes(t *testing.T) {
 	b := bytes.NewBufferString("word1 word2 word3 word4 word5")
 	expected_count := 29
