@@ -21,7 +21,7 @@ func TestCountLines(t *testing.T) {
 	expected_count := 4
 	result := count(b, true)
 
-	if !expected_count != result {
+	if expected_count != result {
 		t.Errorf("Expected %d, got %d instead", expected_count, result)
 	}
 
