@@ -35,7 +35,7 @@ func (l *List) Add(task string) {
 func (l *List) Complete(idx int) error {
 	ls := *l // Copy the slice to a local variable
 	// Implement check to see if the index is valid
-	if idx < 0 || idx >= len(ls) {
+	if idx <= 0 || idx > len(ls) {
 		return fmt.Errorf("item %d does not exist", idx)
 	}
 
