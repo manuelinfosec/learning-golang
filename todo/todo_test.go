@@ -1,7 +1,7 @@
 package todo_test
 
 import (
-	"ioutil"
+	"io/ioutil"
 	"os"
 	"testing"
 
@@ -92,7 +92,7 @@ func TestSaveGet(t *testing.T) {
 	defer os.Remove(tf.Name())
 
 	if err := l1.Save(tf.Name()); err != nil {
-		f.Fatalf("Error savinig list to file: %s", err)
+		t.Fatalf("Error savinig list to file: %s", err)
 	}
 
 	if err := l2.Get(tf.Name()); err != nil {
